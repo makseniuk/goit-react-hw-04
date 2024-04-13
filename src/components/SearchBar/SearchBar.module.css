@@ -1,0 +1,24 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: blue;
+    z-index: 999;
+    width: 100%;
+}
+
+.input {
+    height: 30px;
+    margin-right: 10px;
+}
+
+.btn {
+    background-color: aquamarine;
+}

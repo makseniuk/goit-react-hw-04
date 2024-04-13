@@ -1,3 +1,8 @@
-const Loader = () => { };
+const Loader = () => {
+  return (
+    <>
+    </>
+  )
+};
 
 export default Loader;

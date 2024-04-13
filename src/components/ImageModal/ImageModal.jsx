@@ -1,3 +1,3 @@
-const ImageModal = () => { }; 
+const LoadMoreBtn = () => { };
 
-export default ImageModal;
+export default LoadMoreBtn;

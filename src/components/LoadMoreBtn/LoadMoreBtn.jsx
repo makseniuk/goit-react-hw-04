@@ -1,3 +1,8 @@
-const LoadMoreBtn = () => { };
+const LoadMoreBtn = () => {
+  return (
+    <>
+    </>
+  );
+};
 
 export default LoadMoreBtn;
