@@ -16,7 +16,7 @@ const customStyles = {
   },
 };
 
-const LoadMoreBtn = ({ isOpen, photo, onRequestClose }) => {
+const LoadMore = ({ isOpen, photo, onRequestClose }) => {
     if(!photo){
         return null
     }
@@ -32,11 +32,11 @@ const LoadMoreBtn = ({ isOpen, photo, onRequestClose }) => {
       </button>
       <img
         src={photo.urls.regular}
-        alt={photo.alt_description}
+        alt={photo.alt.description}
         className={styles.imageModal}
       />
     </Modal>
     )
 };
 
-export default LoadMoreBtn;
+export default LoadMore;

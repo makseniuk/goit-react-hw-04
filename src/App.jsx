@@ -7,6 +7,12 @@ import Loader from "../src/components/Loader/Loader";
 import LoadMoreBtn from "../src/components/LoadMoreBtn/LoadMoreBtn";
 import SearchBar from "../src/components/SearchBar/SearchBar";
 
+  const API_KEY = "RakQqQ1UhJMfZkVYL3XNYnH18bMDmFC8Byt4d2iMwvQ";
+
+  const instance = axios.create({
+    baseURL: "https://api.unsplash.com/",
+  });
+
 const App =() => {
   const [photosToShow, setPhotosToShow] = useState(null);
   const [page, setPage] = useState(0);
@@ -26,12 +32,6 @@ const App =() => {
   const handleSearchPage = () => {
     setPage((prev) => prev + 1);
   };
-
-  const API_KEY = "RakQqQ1UhJMfZkVYL3XNYnH18bMDmFC8Byt4d2iMwvQ";
-
-  const instance = axios.create({
-    baseURL: "https://api.unsplash.com/",
-  });
 
   useEffect(() => {
     const fetchData = async (query, page) => {
@@ -53,7 +53,7 @@ const App =() => {
     };
 
     fetchData(query, page);
-  }, [instance, query, page]);
+  }, [query, page]);
 
   const openModal = (bigImage) => {
     setIsOpen(true);

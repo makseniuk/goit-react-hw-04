@@ -17,7 +17,7 @@ const handleClick = (bigImage) => {
                 src={small}
                 alt={description}
                 onClick={() =>
-                  handleClick({ id, urs: {small, regular}, description})}
+                  handleClick({ id, urls: {small, regular}, description})}
               />
             </li>
           )
