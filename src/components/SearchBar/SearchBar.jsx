@@ -1,6 +1,5 @@
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
-import { FcSearch } from "react-icons/fc";
 import styles from "../SearchBar/SearchBar.module.css";
 
 const SearchBar = ({handleQuery }) => {
@@ -42,9 +41,6 @@ const SearchBar = ({handleQuery }) => {
         }}
       />
       <form className={styles.container} onSubmit={handleSubmit}>
-        <button className={styles.button} type="submit">
-          <FcSearch className={styles.icon} />
-        </button>
         <input
           className={styles.input}
           id="search"
@@ -55,6 +51,9 @@ const SearchBar = ({handleQuery }) => {
           name={searchCriteria}
           onChange={handleChange}
         />
+        <button className={styles.button} type="submit">
+          Search
+        </button>
       </form>
     </header>
   )
