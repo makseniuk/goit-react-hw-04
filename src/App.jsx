@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import ErrorMessage from "../src/components/ErrorMessage/ErrorMessage";
-import ImageGallery from "../src/components/ImageCard/ImageCard";
+import ImageGallery from "../src/components/ImageGallery/ImageGallery";
 import ImageModal from "../src/components/ImageModal/ImageModal";
 import Loader from "../src/components/Loader/Loader";
 import LoadMoreBtn from "../src/components/LoadMoreBtn/LoadMoreBtn";
