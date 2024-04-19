@@ -1,6 +1,8 @@
 import Modal from 'react-modal';
 import styles from "../ImageModal/ImageModal.module.css";
 
+Modal.setAppElement('#root');
+
 const customStyles = {
   content: {
     padding: "0",
@@ -16,27 +18,27 @@ const customStyles = {
   },
 };
 
-const LoadMore = ({ isOpen, photo, onRequestClose }) => {
+const ImageModal = ({ isOpen, photo, onRequestClose }) => {
     if(!photo){
         return null
     }
     return (
-        <Modal
-      isOpen={isOpen}
-      onRequestClose={onRequestClose}
-      overlayClassName={styles.overlay}
-      style={customStyles}
-    >
-      <button className={styles.closeButton} onClick={onRequestClose}>
-        x
-      </button>
+      <Modal
+        isOpen={isOpen}
+        onRequestClose={onRequestClose}
+        overlayClassName={styles.overlay}
+        style={customStyles}
+      >
+          <button className={styles.closeButton} onClick={onRequestClose}>
+            x
+          </button>
       <img
         src={photo.urls.regular}
-        alt={photo.alt.description}
+        alt={photo.alt}
         className={styles.imageModal}
       />
     </Modal>
     )
 };
 
-export default LoadMore;
+export default ImageModal;
